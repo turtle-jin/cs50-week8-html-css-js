@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="style.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+            document.addEventListener('DOMContentLoaded', function()
+            {
+                let correct1 = document.querySelector('.correct1');
+                let correct2 = document.querySelector('.correct2');
+                let incorrectAnswers = document.querySelectorAll('.incorrect');
+                correct1.addEventListener('click', function()
+                {
+                    correct1.style.backgroundColor = 'green';
+                    document.querySelector('#feedback1').innerHTML = 'Correct!';
+                });
+
+                correct2.addEventListener('click', function()
+                {
+                    correct2.style.backgroundColor = 'green';
+                    document.querySelector('#feedback2').innerHTML = 'Correct!';
+                });
+
+
+                for (let i = 0; i < incorrectAnswers.length; i++)
+                {
+                    incorrectAnswers[i].addEventListener('click', function()
+                    {
+                        incorrectAnswers[i].style.backgroundColor = 'red';
+                        let feedbackIndex = (i < 3) ? 1 : 2;
+                        document.querySelector(`#feedback${feedbackIndex}`).innerHTML = 'Incorrect!';
+                    });
+                }
+
+                //free response 
+                document.querySelector('#check_answer').addEventListener('click', function()
+                {
+                    let input = document.querySelector('input');
+                    if (input.value.toLowerCase() === 'frost giant'.toLowerCase())
+                    {
+                        input.style.backgroundColor = 'green'; 
+                        document.querySelector('#feedback3').innerHTML = 'Correct!'; 
+                    }
+                    else 
+                    {
+                        input.style.backgroundColor = 'red'; 
+                        document.querySelector('#feedback3').innerHTML = 'Incorrect!';
+                    }
+                })
+
+            });
+
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <div>
+                <h3>How many infinity stones are there?</h3>
+                <button  class="incorrect">5</button>
+                <button class="correct1">6</button>
+                <button class="incorrect">8</button>
+                <button class="incorrect">4</button>
+
+                <p id="feedback1"></p>
+
+
+                </div>
+
+                <div>
+                <h3>What is Mjölnir?</h3>
+                <button class="incorrect">Loki's Scepter</button>
+                <button class="incorrect">Captain America's Shield</button>
+                <button class="incorrect">Winter Soldier's Arm</button>
+                <button class="correct2">Thor's Hammer</button>
+
+                <p id="feedback2"></p>
+
+
+                </div>
+
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <div>
+                    <h3>What is Loki’s real race?</h3>
+                    <input type="text" name="lokirace" placeholder="Enter your answer here." required>
+                    <button id="check_answer">Check Answer</button>
+
+                    <p id="feedback3"></p>
+
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
