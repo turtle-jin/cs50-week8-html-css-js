@@ -1,0 +1,93 @@
+body {
+    background: linear-gradient(rgb(32, 21, 37) 25%, rgb(66, 46, 66) 86%);
+    font-family: "Nunito", sans-serif;
+}
+
+
+#mainNavbar {
+    background-color: #931747;
+    font-size: 1rem;
+    
+}
+#jinlogo {
+    width: 4rem;
+}
+
+
+#heading h1 {
+    color: gainsboro;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 4rem;
+    
+}
+
+#heading p {
+    color: pink;
+    font-weight: 400;
+    font-size: 1.5rem;
+    font-family: 'Amatic SC', cursive;
+}
+
+#heading {
+    padding-top: 80px;
+}
+#headerpic {
+    padding: 100px 0 30px 0;
+}
+
+
+#heading a {
+    background-color: #931747;
+    color: pink;
+    margin-top: 1em;
+    border: 2px solid;
+    border-radius: 10px;
+    font-size: 1em;
+    transition: all 0.2s;
+    font-family: 'Shadows Into Light', cursive;
+    cursor: pointer;
+}
+
+#heading a:hover {
+    border-color: aliceblue;
+    color: #fefae0;
+    box-shadow: 0 0.5em 0.5em -0.4em #c7f9cc;
+    transform: translateY(0.25em)
+}
+
+.quote {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(32, 21, 37);
+     
+    font-family: 'Amatic SC', cursive;
+    font-size: 50px;
+    font-weight: bolder;
+    color: whitesmoke;
+}
+
+#msQuote {
+    
+    
+    display: flex;
+    justify-content: center;
+    
+    padding: 50px 200px 0 200px;
+}
+
+#msSig {
+    
+    
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 200px 30px 0
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    color: pink;
+    background-color: #931747; 
+    font-size: 1rem;
+   padding: 1.5vh 9vh;  
+}
