@@ -14,10 +14,10 @@ body {
 }
 
 
-#heading h1 {
+h1 {
     color: gainsboro;
     font-family: 'Shadows Into Light', cursive;
-    font-size: 4rem;
+    font-size: 3.5vw;
     
 }
 
@@ -93,4 +93,14 @@ footer {
     background-color: #931747; 
     font-size: 1rem;
    padding: 1.5vh 9vh;  
+}
+
+.watermark {
+    width: 8vh;
+}
+
+.aboutInfo {
+    color:whitesmoke;
+    font-size: 1.5vw;
+       
 }
