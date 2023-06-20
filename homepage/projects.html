@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
     <title>My Projects</title>
+    <script src="app.js"></script>
 </head>
 <body>
     <nav id="mainNavbar" class="navbar navbar-dark  navbar-expand-md py-0 fixed-top">
@@ -38,3 +39,42 @@
           </ul>
         </div>
       </nav>
+
+      <section class="container-fluid px-0 projectpage">
+        <div class="row align-items-center content">
+            <div class="col-md-6 text-center" id="heading">
+                <div class="row justify-content-center">
+                    <div class="col-10 col-lg-8 mb-5 mb-md-0">
+                        <h1>Sorry!</h1>
+                        <h1>I don't have any projects yet:( </h1>
+                        <p>I will update this page later,stay tuned</p>
+                        <a href="" id="cheerButton" class="btn btn-info btn-rounded btn-md active" role="button" aria-pressed="true">cheer me on</a>
+                        <h1 id="thx"></h1>
+                    </div>
+                </div>               
+            </div>
+
+            <div class="col-md-6">
+                <img id="projectPic" class="img-fluid" src="images/project.jpg">
+            </div>
+        </div> 
+    
+    </section>
+
+    <footer>
+      <p>Copyright © JIN 2023</p>
+  </footer>
+  <script>
+    window.onload = function() {
+      let message = document.getElementById("thx");
+      let cheerButton = document.getElementById("cheerButton");
+
+      cheerButton.onclick = function(event) {
+        event.preventDefault();
+        message.innerHTML = 'Thank you so much! You are so kind!';
+      };
+    };
+
+  </script>
+</body>
+</html>
